@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  /*Isso faz com que o padding do elementos seja anexado a sua largura e altura
+  e, não somados. ex: elemento com 200px de largura e colocar um
+  padding de 20 nas laterais, ele ficara com 160 largura e nao 240, 
+  o qual é o comportamento padrao do css*/
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 14px Roboto, sans-serif;
+  background: #f0f0f5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* pois nao pegam a fonte definida no body*/
+input, button, textarea {
+  font: 400 18px Roboto, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
