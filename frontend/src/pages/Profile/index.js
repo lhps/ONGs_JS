@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {FiPower} from 'react-icons/fi';
 
 import logoImg from '../../assets/logo.svg';
+import './styles.css'
 
 export default function Profile() {
   return (
