@@ -39,6 +39,16 @@ export default function Register () {
     
   } 
 
+  function uppercase(str) {
+    var array1 = str.split(' ');
+    var newarray1 = [];
+      
+    for(var x = 0; x < array1.length; x++){
+        newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+    }
+    return newarray1.join(' ');
+  }
+
   return (
     <div className="register-container">
       <div className="content">
@@ -74,13 +84,14 @@ export default function Register () {
             <input 
               placeholder="Cidade"
               value={city}
-              onChange={e => setCity(e.target.value)}
+              autoCapitalize="words"
+              onChange={e => setCity(uppercase(e.target.value))}
             />
             <input
               placeholder="UF"
               style={{width: 80}}
               value={uf}
-            onChange={e => setUf(e.target.value)}
+              onChange={e => setUf(e.target.value.toUpperCase())}
             />
           </div>
           <button className="button" type="submit">Cadastrar</button>
