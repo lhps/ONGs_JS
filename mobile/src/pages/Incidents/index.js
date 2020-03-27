@@ -32,7 +32,7 @@ export default function Incidents() {
     setLoading(true);
 
 
-    const response = await api.get('/incidents', {
+    const response = await api.get('incidents', {
       params: { page }
     });
 
@@ -65,7 +65,7 @@ export default function Incidents() {
         style={styles.incidentList}
         data={incidents}
         keyExtractor={incident => String(incident.id)}
-        showsVerticalScrollIndicator={false}
+        showsVerticalScrollIndicator={true}
         onEndReached={loadIncidents}
         onEndReachedThreshold={0.2}
         renderItem={({ item: incident }) => (
